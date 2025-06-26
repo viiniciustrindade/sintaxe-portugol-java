@@ -1,0 +1,186 @@
+= Comparativo de Sintaxe: Portugol Studio vs Java
+Vinícius Trindade
+
+:toc: left
+:toclevels: 2
+
+== 1. Estrutura Básica
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| programa
+funcao inicio() {
+    // corpo
+}
+| public class Main {
+    public static void main(String[] args) {
+        // corpo
+    }
+}
+|===
+
+== 2. Declaração de Variáveis
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| inteiro idade     | int idade;
+| real altura       | double altura;
+| cadeia nome       | String nome;
+| caractere letra   | char letra;
+| logico ativo      | boolean ativo;
+|===
+
+== 3. Entrada de Dados
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java (Scanner)
+
+| leia(idade) | 
+Scanner sc = new Scanner(System.in);  
+idade = sc.nextInt();
+
+| leia(altura) | 
+altura = sc.nextDouble();
+
+| leia(nome) | 
+nome = sc.nextLine();
+|===
+
+== 4. Saída de Dados
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| escreva("Olá")   | System.out.print("Olá");
+| escreval("Olá")  | System.out.println("Olá");
+|===
+
+== 5. Operadores Aritméticos
+
+[cols="1,1,1",options="header"]
+|===
+| Operação | Portugol | Java
+
+| Soma         | + | +
+| Subtração    | - | -
+| Multiplicação| * | *
+| Divisão      | / | /
+| Resto        | % | %
+|===
+
+== 6. Estrutura Condicional
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| se (idade >= 18) {
+    escreva("Maior de idade")
+} senao {
+    escreva("Menor de idade")
+}
+| if (idade >= 18) {
+    System.out.println("Maior de idade");
+} else {
+    System.out.println("Menor de idade");
+}
+
+| senaose (idade > 60) {
+    escreva("Idoso")
+}
+| else if (idade > 60) {
+    System.out.println("Idoso");
+}
+|===
+
+== 7. Escolha (switch)
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| escolha(opcao) {
+    caso 1:
+        escreva("Opção 1")
+        pare
+    caso 2:
+        escreva("Opção 2")
+        pare
+    outrocaso:
+        escreva("Opção inválida")
+}
+| switch(opcao) {
+    case 1:
+        System.out.println("Opção 1");
+        break;
+    case 2:
+        System.out.println("Opção 2");
+        break;
+    default:
+        System.out.println("Opção inválida");
+}
+|===
+
+== 8. Laços de Repetição
+
+=== Enquanto
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| enquanto (i < 10) {
+    escreva(i)
+    i = i + 1
+}
+| while (i < 10) {
+    System.out.println(i);
+    i = i + 1;
+}
+|===
+
+=== Para
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| para (inteiro i = 0; i < 10; i++) {
+    escreva(i)
+}
+| for (int i = 0; i < 10; i++) {
+    System.out.println(i);
+}
+|===
+
+== 9. Funções
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| funcao real somar(real a, real b) {
+    retorne a + b
+}
+| public class Calculadora {
+    public double somar(double a, double b) {
+        return a + b;
+    }
+}
+|===
+== 10. Comentários
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio | Java
+
+| // comentário | // comentário
+| /* comentário */ | /* comentário */
+|===
+
