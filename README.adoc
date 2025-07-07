@@ -12,12 +12,12 @@ Vinícius Trindade
 
 | programa
 funcao inicio() {
-    // corpo
+// corpo
 }
 | public class Main {
-    public static void main(String[] args) {
-        // corpo
-    }
+public static void main(String[] args) {
+// corpo
+}
 }
 |===
 
@@ -40,14 +40,13 @@ funcao inicio() {
 |===
 | Portugol Studio | Java (Scanner)
 
-| leia(idade) | 
-Scanner sc = new Scanner(System.in);  
-idade = sc.nextInt();
+| leia(idade) |
+Scanner sc = new Scanner(System.in);idade = sc.nextInt();
 
-| leia(altura) | 
+| leia(altura) |
 altura = sc.nextDouble();
 
-| leia(nome) | 
+| leia(nome) |
 nome = sc.nextLine();
 |===
 
@@ -81,21 +80,21 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | se (idade >= 18) {
-    escreva("Maior de idade")
+escreva("Maior de idade")
 } senao {
-    escreva("Menor de idade")
+escreva("Menor de idade")
 }
 | if (idade >= 18) {
-    System.out.println("Maior de idade");
+System.out.println("Maior de idade");
 } else {
-    System.out.println("Menor de idade");
+System.out.println("Menor de idade");
 }
 
 | senaose (idade > 60) {
-    escreva("Idoso")
+escreva("Idoso")
 }
 | else if (idade > 60) {
-    System.out.println("Idoso");
+System.out.println("Idoso");
 }
 |===
 
@@ -106,24 +105,24 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | escolha(opcao) {
-    caso 1:
-        escreva("Opção 1")
-        pare
-    caso 2:
-        escreva("Opção 2")
-        pare
-    outrocaso:
-        escreva("Opção inválida")
+caso 1:
+escreva("Opção 1")
+pare
+caso 2:
+escreva("Opção 2")
+pare
+outrocaso:
+escreva("Opção inválida")
 }
 | switch(opcao) {
-    case 1:
-        System.out.println("Opção 1");
-        break;
-    case 2:
-        System.out.println("Opção 2");
-        break;
-    default:
-        System.out.println("Opção inválida");
+case 1:
+System.out.println("Opção 1");
+break;
+case 2:
+System.out.println("Opção 2");
+break;
+default:
+System.out.println("Opção inválida");
 }
 |===
 
@@ -136,12 +135,12 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | enquanto (i < 10) {
-    escreva(i)
-    i = i + 1
+escreva(i)
+i = i + 1
 }
 | while (i < 10) {
-    System.out.println(i);
-    i = i + 1;
+System.out.println(i);
+i = i + 1;
 }
 |===
 
@@ -152,10 +151,10 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | para (inteiro i = 0; i < 10; i++) {
-    escreva(i)
+escreva(i)
 }
 | for (int i = 0; i < 10; i++) {
-    System.out.println(i);
+System.out.println(i);
 }
 |===
 
@@ -166,14 +165,15 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | funcao real somar(real a, real b) {
-    retorne a + b
+retorne a + b
 }
 | public class Calculadora {
-    public double somar(double a, double b) {
-        return a + b;
-    }
+public double somar(double a, double b) {
+return a + b;
+}
 }
 |===
+
 == 10. Comentários
 
 [cols="1,1",options="header"]
@@ -181,6 +181,54 @@ nome = sc.nextLine();
 | Portugol Studio | Java
 
 | // comentário | // comentário
-| /* comentário */ | /* comentário */
+| /* comentário / | / comentário */
+|===
+
+== 11. Estrutura Map (Dicionário)
+
+[cols="1,1",options="header"]
+|===
+| Portugol Studio (simula com 2 vetores) | Java
+
+| // Não possui diretamente
+cadeia nomes[3]
+real notas[3] |
+import java.util.*;
+Map<String, Double> notas = new HashMap<>();
+notas.put("Ana", 9.5);
+notas.put("Bruno", 7.8);
+|===
+
+=== Acessando valores no Map
+[source,java]
+
+System.out.println(notas.get("Ana")); // Exibe 9.5
+
+=== Verificando chave existente
+[source,java]
+
+if (notas.containsKey("Bruno")) {
+System.out.println("Bruno está na lista.");
+}
+
+=== Listando com foreach
+[source,java]
+
+for (Map.Entry<String, Double> entrada : notas.entrySet()) {
+System.out.println("Aluno: " + entrada.getKey() + " | Nota: " + entrada.getValue());
+}
+
+=== Principais métodos de Map
+
+|===
+| Método | Função
+| put(k, v) | Adiciona ou atualiza valor para a chave
+| get(k) | Retorna o valor da chave
+| remove(k) | Remove a chave e valor
+| containsKey(k) | Verifica se a chave existe
+| containsValue(v) | Verifica se o valor existe
+| entrySet() | Retorna todas as entradas (pares)
+| keySet() | Retorna todas as chaves
+| values() | Retorna todos os valores
 |===
 
